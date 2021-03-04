@@ -260,7 +260,7 @@ body {
   color: #1B1C21;
   font-size: 14px;
   line-height: 18px;
-  background: no-repeat url("/src/img/background.jpg");
+  background: no-repeat url(./static/background.jpg);
   background-size: cover; }
 
 li {
@@ -271,22 +271,22 @@ span {
 
 @font-face {
   font-family: 'TT Lakes';
-  src: url("/src/fonts/TTLakes-Regular.eot");
-  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url("/src/fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("/src/fonts/TTLakes-Regular.woff") format("woff"), url("/src/fonts/TTLakes-Regular.ttf") format("truetype");
+  src: url(./fonts/TTLakes-Regular.eot);
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url(./fonts/TTLakes-Regular.eot?#iefix) format("embedded-opentype"), url(./fonts/TTLakes-Regular.woff) format("woff"), url(./fonts/TTLakes-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'TT Lakes Bold';
-  src: url("/src/fonts/TTLakes-Bold.eot");
-  src: local("TT Lakes Bold"), local("TTLakes-Bold"), url("/src/fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"), url("/src/fonts/TTLakes-Bold.woff") format("woff"), url("/src/fonts/TTLakes-Bold.ttf") format("truetype");
+  src: url(./fonts/TTLakes-Bold.eot);
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"), url(./fonts/TTLakes-Bold.eot?#iefix) format("embedded-opentype"), url(./fonts/TTLakes-Bold.woff) format("woff"), url(./fonts/TTLakes-Bold.ttf) format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'TT Lakes Medium';
-  src: url("/src/fonts/TTLakes-Medium.eot");
-  src: url("/src/fonts/TTLakes-Medium.eot?#iefix") format("embedded-opentype"), url("/src/fonts/TTLakes-Medium.woff") format("woff"), url("/src/fonts/TTLakes-Medium.ttf") format("truetype");
+  src: url(./fonts/TTLakes-Medium.eot);
+  src: url(./fonts/TTLakes-Medium.eot?#iefix) format("embedded-opentype"), url(./fonts/TTLakes-Medium.woff) format("woff"), url(./fonts/TTLakes-Medium.ttf) format("truetype");
   font-weight: 500;
   font-style: normal; }
 
@@ -312,7 +312,7 @@ span {
     height: 40px;
     line-height: 40px; }
     .title__text--highlight {
-      background: no-repeat url("/src/img/highlight.svg"); }
+      background: no-repeat url(./static/highlight.svg); }
 
 .slide-menu {
   display: flex;
@@ -376,7 +376,7 @@ span {
     margin: 0 24px 24px 3vw; }
   .about__expand {
     display: inline-block;
-    background: no-repeat left 5px center url("/src/img/expand.svg");
+    background: no-repeat left 5px center url(./static/expand.svg);
     padding-left: 20px;
     font-size: 16px;
     vertical-align: top;
@@ -388,7 +388,7 @@ span {
       transition-duration: 250ms;
       cursor: pointer; }
     .about__expand--expanded {
-      background: no-repeat left 5px center url("/src/img/collapse.svg"); }
+      background: no-repeat left 5px center url(./static/collapse.svg); }
   .about__text {
     max-height: 5em;
     overflow: hidden; }
@@ -511,7 +511,7 @@ span {
     text-indent: 24px;
     line-height: 32px; }
     .menu__item--current {
-      background: no-repeat url("/src/img/menu-highlight.svg"); }
+      background: no-repeat url(./static/menu-highlight.svg); }
       .menu__item--current a {
         color: gray; }
   .menu__link:hover {
@@ -690,19 +690,19 @@ span {
   .button--icon-repair {
     background: no-repeat center center transparent url(./static/repair.svg); }
   .button--icon-checkstatus {
-    background: no-repeat center center transparent url("/dist/img/checkstatus.svg"); }
+    background: no-repeat center center transparent url(./static/checkstatus.svg); }
   .button--icon-call {
-    background: no-repeat center center transparent url("/dist/img/call.svg"); }
+    background: no-repeat center center transparent url(./static/call.svg); }
   .button--icon-chat {
-    background: no-repeat center center transparent url("/dist/img/chat.svg"); }
+    background: no-repeat center center transparent url(./static/chat.svg); }
   .button--icon-profile {
-    background: no-repeat center center transparent url("/dist/img/profile.svg"); }
+    background: no-repeat center center transparent url(./static/profile.svg); }
   .button--close {
-    background: no-repeat center center transparent url("/dist/img/close.svg"); }
+    background: no-repeat center center transparent url(./static/close.svg); }
   .button--search {
-    background: no-repeat center center transparent url("/dist/img/search.svg"); }
+    background: no-repeat center center transparent url(./static/search.svg); }
   .button--arrow {
-    background: no-repeat center center transparent url("/dist/img/swiper/go.svg");
+    background: no-repeat center center transparent url(./static/go.svg);
     padding: 0;
     border: none;
     width: 40px;
