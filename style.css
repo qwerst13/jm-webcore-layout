@@ -519,7 +519,7 @@ span {
             filter: opacity(0.7);
     transition-duration: 250ms; }
   .menu--visible {
-    height: 100vw;
+    height: 100vh;
     transition-duration: 1s; }
 
 .brands {
