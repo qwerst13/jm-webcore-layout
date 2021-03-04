@@ -64,9 +64,16 @@
 
   &__item{
     height: 32px;
-    margin: 24px 0;
+    margin: 12px 0;
     text-indent: 24px;
     line-height: 32px;
+
+    @media (min-width: $screen-md) {
+      margin: 24px 0;
+    }
+    @media (min-width: $screen-lg) {
+      margin: 24px 0;
+    }
 
     &--current{
       background: no-repeat url('../img/menu-highlight.svg');
