@@ -11,3 +11,10 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+
+# Не переформатируем минифицированные JS и CSS файлы.
+[*.min.*]
+indent_style = ignore
+trim_trailing_whitespace = false
+insert_final_newline = ignore

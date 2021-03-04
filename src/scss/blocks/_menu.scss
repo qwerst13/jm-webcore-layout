@@ -1,0 +1,91 @@
+.menu{
+  @include flex($direction:column,$items:stretch);
+
+  width: 100vw;
+  min-width: 320px;
+  max-width: 360px;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  flex-shrink: 0;
+  background-color: #fff;
+  font-size: 16px;
+  box-shadow: 4px 0 40px gray;
+  overflow: hidden;transition-duration: 1s;
+
+
+  .menu-header{
+    border: none;
+  }
+  .menu-footer{
+    padding: 16px;
+    margin-top: auto;
+
+    &__mail{
+      margin: 16px 8px;
+    }
+    &__mail-link{
+      &:hover{
+        filter: opacity(0.7);
+        transition-duration: 250ms;
+      }
+    }
+    &__phone{
+      margin: 16px 8px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    &__tel-link{
+      &:hover{
+        filter: opacity(0.7);
+        transition-duration: 250ms;
+      }
+    }
+    &__language{
+      margin: 32px 8px;
+    }
+    &__language-select{
+      margin-right: 8px;
+
+      &:hover{
+        filter: opacity(0.7);
+        transition-duration: 250ms;
+        cursor: pointer;
+      }
+
+      &--current{
+        color: gray;
+      }
+    }
+  }
+
+  &__item{
+    height: 32px;
+    margin: 24px 0;
+    text-indent: 24px;
+    line-height: 32px;
+
+    &--current{
+      background: no-repeat url('/src/img/menu-highlight.svg');
+
+      a{
+        color: gray;
+      }
+    }
+  }
+  &__link{
+    &:hover{
+      filter: opacity(0.7);
+      transition-duration: 250ms;
+    }
+  }
+
+  &--visible{
+
+    height: 100vw;
+    transition-duration: 1s;
+  }
+
+}

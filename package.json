@@ -42,5 +42,8 @@
     "start": "webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "swiper": "^6.4.15"
   }
 }

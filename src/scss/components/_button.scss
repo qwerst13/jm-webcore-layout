@@ -1,0 +1,51 @@
+.button{
+  padding: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: auto 8px;
+
+  &:hover{
+    filter: opacity(0.7);
+    transition-duration: 250ms;
+  }
+
+  &--menu{
+    background: no-repeat center center transparent url("/src/img/menu.svg");
+  }
+  &--icon-repair{
+    background: no-repeat center center transparent url("/src/img/repair.svg");
+  }
+  &--icon-checkstatus{
+    background: no-repeat center center transparent url("/src/img/checkstatus.svg");
+  }
+  &--icon-call{
+    background: no-repeat center center transparent url("/src/img/call.svg");
+  }
+  &--icon-chat{
+    background: no-repeat center center transparent url("/src/img/chat.svg");
+  }
+  &--icon-profile{
+    background: no-repeat center center transparent url("/src/img/profile.svg");
+  }
+  &--close{
+    background: no-repeat center center transparent url("/src/img/close.svg");
+  }
+  &--search{
+    background: no-repeat center center transparent url("/src/img/search.svg");
+  }
+  &--arrow{
+    background: no-repeat center center transparent url("/src/img/swiper/go.svg");
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: auto 16px;
+  }
+}
+
+
+
+

@@ -1,17 +1,18 @@
-$bgColor: #24292e;
-$text: #fff;
+@import "vendors/swiper";
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import "base/base";
+@import "base/fonts";
+
+@import "blocks/brands";
+@import "blocks/container";
+@import "blocks/content";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/swiper-custom-styles";
+
+@import "components/button";
+@import "components/icons";
+

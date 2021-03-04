@@ -1,0 +1,130 @@
+
+  .title{
+    @include flex(space-between);
+    margin: 24px 0;
+
+    &__text{
+      padding-left: 3vw;
+      height: 40px;
+      line-height: 40px;
+
+      &--highlight{
+        background: no-repeat url('/src/img/highlight.svg');
+      }
+    }
+  }
+
+  .slide-menu{
+    @include flex($items:center);
+    flex-basis: 100%;
+    list-style: none;
+    font-size: 16px;
+    white-space:nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: wrap;
+    }
+
+    /* chrome based */
+    &::-webkit-scrollbar {
+      display: none;
+      background: transparent;
+    }
+    /*fade effect*/
+    &::after{
+      content:'';
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right:0;
+      background-image: linear-gradient(to right, transparent, #F8F8F8 90%);
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    &__item{
+      display: inline-block;
+      padding: 0.5em 1em;
+      height: 40px;
+
+      &--current{
+        background: #FFFFFF;
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+      }
+    }
+    &__link{
+      font-family: $font-medium;
+      color: #7E7E82;
+
+      &:hover{
+        filter: opacity(0.7);
+        transition-duration: 250ms;
+      }
+    }
+
+    &--position{
+      margin: 0 0 24px 3vw;
+    }
+  }
+
+  .about{
+    @include flex($items:stretch);
+    flex-wrap: wrap;
+
+    &__desription{
+      flex-basis: 290px;
+      flex-grow: 1;
+      margin: 0 24px 24px 3vw;
+    }
+    &__expand{
+      display: inline-block;
+      background: no-repeat left 5px center url("/src/img/expand.svg");
+      padding-left: 20px;
+      font-size: 16px;
+      vertical-align: top;
+      margin: 16px 8px;
+      font-family: $font-medium;
+
+      &:hover{
+        filter: opacity(0.7);
+        transition-duration: 250ms;
+        cursor: pointer;
+      }
+      &--expanded{
+        background: no-repeat left 5px center url("/src/img/collapse.svg");
+      }
+    }
+    &__text{
+      max-height: 5em;
+      overflow: hidden;
+
+      @media (min-width: $screen-md) {
+        max-height: 8em;
+        overflow: hidden;
+      }
+      @media (min-width: $screen-lg) {
+        max-height: 12em;
+        overflow: hidden;
+      }
+    }
+    &__picture{
+      width: 320px;
+      margin: 0 auto;
+
+      @media (min-width: $screen-md) {
+        width: 360px;
+        margin: 0 auto;
+      }
+      @media (min-width: $screen-lg) {
+        width: 520px;
+        margin: 0 3vw 0 auto;
+      }
+    }
+  }
+

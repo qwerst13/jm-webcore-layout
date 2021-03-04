@@ -1,0 +1,28 @@
+/* box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* для ссылок */
+a {
+  text-decoration: none;
+  border: none;
+  color: #1B1C21;
+}
+
+body{
+  font-family: $font-regular;
+  color: #1B1C21;
+  font-size: 14px;
+  line-height: 18px;
+  background: no-repeat url("/src/img/background.jpg");
+  background-size: cover;
+}
+
+li{
+  list-style: none;
+}
+span{
+  line-height: 0;
+}

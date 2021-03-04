@@ -1,0 +1,8 @@
+.container{
+  @include flex($direction:column, $items:stretch);
+  height: 100vh;
+  min-width: 320px;
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: $background;
+}

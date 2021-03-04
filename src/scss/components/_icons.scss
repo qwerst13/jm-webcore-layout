@@ -1,0 +1,32 @@
+.icons{
+  @include flex($items:center);
+  margin-left: auto;
+
+  &__block-1{
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__text{
+    font-family: $font-medium;
+    font-size: 16px;
+    cursor:pointer;
+
+    &:hover{
+      filter: opacity(0.7);
+      transition-duration: 250ms;
+    }
+  }
+
+  &--position-title{
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      @include flex(row, flex-end, center);
+      margin-right: 3vw;
+    }
+  }
+}

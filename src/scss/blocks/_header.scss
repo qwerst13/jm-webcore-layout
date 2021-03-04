@@ -1,0 +1,56 @@
+.header{
+  @include flex(row, space-between, center);
+  height: 88px;
+  line-height: 0;
+  border-bottom: 1px solid #D9FFF5;
+  background-color: #fff;
+  padding: 16px;
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  .menu-header{
+    border: none;
+  }
+  &__logo{
+
+    &:hover{
+      transform: scale(1.05);
+      transition-duration: 250ms;
+    }
+
+    &--position-header{
+      margin-right: auto;
+    }
+  }
+  &__divider{
+    height: 32px;
+    width: 2px;
+    background: #eaeaea;
+    border-radius: 1px;
+
+    &--small-devices{
+      display: block;
+      margin: auto;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+    &--large-devices{
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: block;
+        margin: auto 10px;
+      }
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+}
