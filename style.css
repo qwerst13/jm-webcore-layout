@@ -686,9 +686,9 @@ span {
             filter: opacity(0.7);
     transition-duration: 250ms; }
   .button--menu {
-    background: no-repeat center center transparent url("/dist/img/menu.svg"); }
+    background: no-repeat center center transparent url(./static/menu.svg); }
   .button--icon-repair {
-    background: no-repeat center center transparent url("/dist/img/repair.svg"); }
+    background: no-repeat center center transparent url(./static/repair.svg); }
   .button--icon-checkstatus {
     background: no-repeat center center transparent url("/dist/img/checkstatus.svg"); }
   .button--icon-call {
