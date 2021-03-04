@@ -9,7 +9,7 @@
       line-height: 40px;
 
       &--highlight{
-        background: no-repeat url('/src/img/highlight.svg');
+        background: no-repeat url('../img/highlight.svg');
       }
     }
   }
@@ -84,7 +84,7 @@
     }
     &__expand{
       display: inline-block;
-      background: no-repeat left 5px center url("/src/img/expand.svg");
+      background: no-repeat left 5px center url("../img/expand.svg");
       padding-left: 20px;
       font-size: 16px;
       vertical-align: top;
@@ -97,7 +97,7 @@
         cursor: pointer;
       }
       &--expanded{
-        background: no-repeat left 5px center url("/src/img/collapse.svg");
+        background: no-repeat left 5px center url("../img/collapse.svg");
       }
     }
     &__text{
