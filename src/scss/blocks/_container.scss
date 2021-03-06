@@ -1,8 +1,17 @@
 .container{
   @include flex($direction:column, $items:stretch);
-  height: 100vh;
+  height: auto;
   min-width: 320px;
-  max-width: 1366px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: $background;
+
+  @media (min-width: $screen-lg) {
+    flex-direction: row;
+  }
 }
+
+/*
+@media (min-width: $screen-md) {}
+@media (min-width: $screen-lg) {}
+*/

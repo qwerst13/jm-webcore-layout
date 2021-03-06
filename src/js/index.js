@@ -33,15 +33,18 @@ if (window.innerWidth>768) {
 }
 */
 
-// show/hide functionality on brands elements
-document.querySelector('.swiper-container>.about__expand').addEventListener('click',(e)=>{
-  document.querySelector('.swiper-wrapper').classList.toggle('swiper-wrapper--full');
-  e.target.classList.toggle('about__expand--expanded');
-  if (document.querySelector('.swiper-wrapper').classList.contains('swiper-wrapper--full')){
-    e.target.innerHTML='Скрыть';
-  } else {
-    e.target.innerHTML='Показать все';
-  }
+// show/hide functionality on swiper elements
+document.querySelectorAll('.swiper-container>.about__expand').forEach((item)=>{
+  item.addEventListener('click',(e)=>{
+    console.log(e.target);
+    e.target.parentElement.querySelector('.swiper-wrapper').classList.toggle('swiper-wrapper--full');
+    e.target.classList.toggle('about__expand--expanded');
+    if (e.target.parentElement.querySelector('.swiper-wrapper').classList.contains('swiper-wrapper--full')){
+      e.target.innerHTML='Скрыть';
+    } else {
+      e.target.innerHTML='Показать все';
+    }
+  });
 });
 
 // show/hide menu

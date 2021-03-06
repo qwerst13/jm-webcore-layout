@@ -31,6 +31,10 @@
   }
   &--close{
     background: no-repeat center center transparent url("../img/close.svg");
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
   &--search{
     background: no-repeat center center transparent url("../img/search.svg");
@@ -42,7 +46,26 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    margin: auto 16px;
+  }
+  &--order{
+    @include flex(row,space-between,center);
+    background-color: #FF3E79;
+    padding: 4px 4px 4px 12px;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    font-family: $font-bold;
+  }
+  &--goside{
+    background: no-repeat center center transparent url("../img/swiper/goside.svg");
+    padding: 0;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
   }
 }
 

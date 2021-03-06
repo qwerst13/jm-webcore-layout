@@ -1,10 +1,13 @@
-@import "vendors/swiper";
-
-@import "abstracts/mixins";
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/base";
 @import "base/fonts";
+
+@import "components/button";
+@import "components/icons";
+
+@import "vendors/swiper";
 
 @import "blocks/brands";
 @import "blocks/container";
@@ -13,6 +16,5 @@
 @import "blocks/menu";
 @import "blocks/swiper-custom-styles";
 
-@import "components/button";
-@import "components/icons";
+
 

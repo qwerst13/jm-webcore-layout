@@ -2,8 +2,8 @@
   @include flex(row, space-between, center);
   height: 88px;
   line-height: 0;
-  border-bottom: 1px solid #D9FFF5;
-  background-color: #fff;
+  border-bottom: 1px solid $border-color;
+  background-color: $white;
   padding: 16px;
 
   @media (min-width: $screen-lg) {
@@ -27,7 +27,7 @@
   &__divider{
     height: 32px;
     width: 2px;
-    background: #eaeaea;
+    background: $divider;
     border-radius: 1px;
 
     &--small-devices{

@@ -16,13 +16,30 @@
   overflow: hidden;
   transition-duration: 1s;
 
+  @media (min-width: $screen-lg) {
+    position: relative;
+    min-width: 280px;
+    min-height: 740px;
+    height: 100vh;
+    box-shadow: none;
+    flex-shrink: 1;
+  }
 
+  .header{
+    @media (min-width: $screen-lg){
+      display: flex;
+    }
+  }
   .menu-header{
     border: none;
   }
   .menu-footer{
-    padding: 16px;
+    padding: 16px 16px 40px 16px;
     margin-top: auto;
+
+    .icons__block-1{
+      display: block;
+    }
 
     &__mail{
       margin: 16px 8px;
