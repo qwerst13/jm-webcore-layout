@@ -74,6 +74,11 @@
     </div>
   </div>
 
+  <div class="modal modal--feedback"></div>
+  <div class="modal modal-call"></div>
+
+  <div class="overlay"></div>
+
 
 
   <main class="content">
@@ -89,33 +94,38 @@
 
 
 
-    <ul class="slide-menu slide-menu--position">
-      <li class="slide-menu__item slide-menu__item--current"><a href="#" class="slide-menu__link">Ремонтируемые бренды</a></li>
-      <li class="slide-menu__item"><a href="#" class="slide-menu__link">Ремонтируемые устройства</a></li>
-      <li class="slide-menu__item"><a href="#" class="slide-menu__link">Цены на услуги</a></li>
-      <li class="slide-menu__item"><a href="#" class="slide-menu__link">Адреса сервисных центров</a></li>
-      <li class="slide-menu__item"><a href="#" class="slide-menu__link">Специальные цены</a></li>
-      <li class="slide-menu__item"><a href="#" class="slide-menu__link">Внезапный пункт</a></li>
-      <li class="slide-menu__item"><a href="#" class="slide-menu__link">Внезапный пункт2</a></li>
+    <ul class="slide-menu">
+      <li class="slide-menu__item slide-menu__item--current"><a href="#brands" class="slide-menu__link">Ремонтируемые бренды</a></li>
+      <li class="slide-menu__item"><a href="#items" class="slide-menu__link">Ремонтируемые устройства</a></li>
+      <li class="slide-menu__item"><a href="#prices" class="slide-menu__link">Цены на услуги</a></li>
+      <li class="slide-menu__item"><a href="#offer" class="slide-menu__link">Адреса сервисных центров</a></li>
+      <li class="slide-menu__item"><a href="#offer" class="slide-menu__link">Специальные цены</a></li>
+      <li class="slide-menu__item"><a href="#offer" class="slide-menu__link">Отзывы</a></li>
+      <li class="slide-menu__item"><a href="#offer" class="slide-menu__link">Партнеры</a></li>
     </ul>
 
 
 
     <div class="about">
+      <img class="about__picture" alt="Наш офис" src="img/IMG_3223.jpg">
       <article class="about__desription">
         <div class="about__text">
+          <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+          <br>
+          <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+          <br>
           <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
           <br>
           <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
         </div>
         <div class="about__expand">Читать далее</div>
       </article>
-      <img class="about__picture" alt="Наш офис" src="img/IMG_3223.jpg">
+
     </div>
 
 
 
-    <div class="swiper swiper--brands">
+    <div class="swiper swiper--brands" id="brands">
       <div class="swiper-header">Ремонт техники различных брендов</div>
       
       <div class="swiper-container">
@@ -142,7 +152,7 @@
 
 
 
-    <div class="swiper swiper--items">
+    <divi class="swiper swiper--items" id="items">
       <div class="swiper-header">Ремонт различных видов техники</div>
       
       <div class="swiper-container">
@@ -161,11 +171,11 @@
         <div class="swiper-pagination"></div>
         <div class="about__expand">Показать все</div>
       </div>
-    </div>
+    </divi>
 
 
 
-    <div class="swiper swiper--prices">
+    <div class="swiper swiper--prices" id="prices">
       <div class="swiper-header">Цены на услуги</div>
       
 
@@ -304,11 +314,20 @@
 
         </div>
         <div class="swiper-pagination"></div>
+      </div>
     </div>
 
+    <div class="offer" id="offer">
+      <div class="offer__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</div>
+      <a href="#" class="offer__link">Получить коммерческое предложение</a>
+    </div>
 
-  </div></main>
-
+    <footer class="footer">
+      <div class="footer__text">2019 CPS<br>&#169; Разработано командой Apesong </div>
+      <div class="footer__text">Политика конфиденциальности</div>
+      <div class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</div>
+    </footer>
+  </main>
 
 </div>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
