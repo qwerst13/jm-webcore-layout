@@ -1,0 +1,31 @@
+.footer{
+  @include flex(column, flex-start, center);
+  margin: 40px 16px 16px 16px;
+  color: $text-gray;
+  line-height: 16px;
+  border-top: 1px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    @include flex(row, space-between, flex-start)
+  }
+
+  &__text{
+    text-align: center;
+    margin: 8px auto;
+
+    @media (min-width: $screen-md) {
+
+      flex-basis: 33%;
+
+      &:nth-child(1){
+        text-align: start;
+      }
+      &:nth-child(2){
+        text-align: center;
+      }
+      &:nth-child(3){
+        text-align: end;
+      }
+    }
+  }
+}

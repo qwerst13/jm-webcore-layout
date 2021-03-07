@@ -1,0 +1,28 @@
+.offer{
+  margin: 16px;
+
+  @media (min-width: $screen-md) {
+    width: 425px;
+  }
+
+  &__text{
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+  }
+  &__link{
+    font-size: 16px;
+    font-family: $font-medium;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 10px;
+      margin-left: 10px;
+      background-image: url("../img/arrow.svg");
+    }
+  }
+}
