@@ -7,7 +7,7 @@
   <meta name="keywords" content="ремонт, Dell, услуги, сервисный центр">
   <title>Сервисный центр Dell</title>
 <link href="style.css" rel="stylesheet"></head>
-<body>
+<body class="body">
 
 
 <div class="container">
@@ -74,8 +74,43 @@
     </div>
   </div>
 
-  <div class="modal modal--feedback"></div>
-  <div class="modal modal-call"></div>
+  <div class="modal modal--feedback">
+
+    <button class="button button--close"></button>
+
+    <h3 class="modal__title title__text title__text--highlight">Обратная связь</h3>
+
+    <form id="feedback" action="" method="post" class="modal__form">
+      <input name="name" class="modal__input" placeholder="Имя" required>
+      <input name="phone" class="modal__input" placeholder="Телефон" required>
+      <input name="mail" class="modal__input" placeholder="Электронная почта" required>
+      <textarea name="message" class="modal__textarea" placeholder="Сообщение" required></textarea>
+    </form>
+
+    <div class="modal__text">
+      Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности.</a>
+    </div>
+
+    <button type="button" form="feedback" class="button button--order">ОТПРАВИТЬ</button>
+
+  </div>
+  <div class="modal modal--call">
+
+    <button class="button button--close"></button>
+
+    <h3 class="modal__title title__text title__text--highlight">Заказать звонок</h3>
+
+    <form id="call" action="" method="post" class="modal__form">
+      <input name="phone" class="modal__input" placeholder="Телефон" required>
+    </form>
+
+    <div class="modal__text">
+      Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности.</a>
+    </div>
+
+    <button type="button" form="call" class="button button--order">ОТПРАВИТЬ</button>
+
+  </div>
 
   <div class="overlay"></div>
 
@@ -152,7 +187,7 @@
 
 
 
-    <divi class="swiper swiper--items" id="items">
+    <div class="swiper swiper--items" id="items">
       <div class="swiper-header">Ремонт различных видов техники</div>
       
       <div class="swiper-container">
@@ -171,7 +206,7 @@
         <div class="swiper-pagination"></div>
         <div class="about__expand">Показать все</div>
       </div>
-    </divi>
+    </div>
 
 
 
@@ -208,7 +243,7 @@
                   <div class="item-container__text--mobile">Срок</div>
                   <div class="item-container__text--all">30 мин</div>
                 </div>
-                <div class="button--order"><div>ЗАКАЗАТЬ</div><button class="button--goside"></button></div>
+                <div class="button button--order">ЗАКАЗАТЬ</div>
 
               </div>
             </div>
@@ -233,7 +268,7 @@
                   <div class="item-container__text--mobile">Срок</div>
                   <div class="item-container__text--all">30-120 мин</div>
                 </div>
-                <div class="button--order"><div>ЗАКАЗАТЬ</div><button class="button--goside"></button></div>
+                <div class="button button--order">ЗАКАЗАТЬ</div>
 
               </div>
             </div>
@@ -257,7 +292,7 @@
                   <div class="item-container__text--mobile">Срок</div>
                   <div class="item-container__text--all">30-120 мин</div>
                 </div>
-                <div class="button--order"><div>ЗАКАЗАТЬ</div><button class="button--goside"></button></div>
+                <div class="button button--order">ЗАКАЗАТЬ</div>
 
               </div>
             </div>
@@ -281,7 +316,7 @@
                   <div class="item-container__text--mobile">Срок</div>
                   <div class="item-container__text--all">30-120 мин</div>
                 </div>
-                <div class="button--order"><div>ЗАКАЗАТЬ</div><button class="button--goside"></button></div>
+                <div class="button button--order">ЗАКАЗАТЬ</div>
 
               </div>
             </div>
@@ -305,7 +340,7 @@
                   <div class="item-container__text--mobile">Срок</div>
                   <div class="item-container__text--all">30-120 мин</div>
                 </div>
-                <div class="button--order"><div>ЗАКАЗАТЬ</div><button class="button--goside"></button></div>
+                <div class="button button--order">ЗАКАЗАТЬ</div>
 
               </div>
             </div>
