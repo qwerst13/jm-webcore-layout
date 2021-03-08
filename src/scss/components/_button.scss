@@ -49,8 +49,9 @@
   }
   &--order{
     @include flex(row,space-between,center);
-    background-color: #FF3E79;
+    background: no-repeat center right 4px $pink url("../img/swiper/goside.svg");
     padding: 4px 4px 4px 12px;
+    margin: 0;
     width: 120px;
     height: 32px;
     border-radius: 16px;
@@ -59,14 +60,7 @@
     line-height: 24px;
     font-family: $font-bold;
   }
-  &--goside{
-    background: no-repeat center center transparent url("../img/swiper/goside.svg");
-    padding: 0;
-    border: none;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-  }
+
 }
 
 

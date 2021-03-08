@@ -1,7 +1,6 @@
 // import Swiper JS
 import Swiper from 'swiper/bundle';
 // import Swiper styles
-import 'swiper/swiper.scss';
 
 import '../scss/style.scss';
 
@@ -26,6 +25,7 @@ if (window.innerWidth<768) {
     }
   });
 }
+
 
 /* if resize need
 if (window.innerWidth>768) {
@@ -56,16 +56,42 @@ document.querySelector('.about .about__expand').addEventListener('click',(e)=>{
     }
   });
 
-
-
 let menu = document.querySelector('.menu'),
-    overlay = document.querySelector('.overlay');
+    overlay = document.querySelector('.overlay'),
+    body = document.querySelector('.body'),
+    modalFeedback = document.querySelector('.modal--feedback'),
+    modalCall = document.querySelector('.modal--call');
 
-
-// show/hide menu
+// show/hide menu/modal
 document.querySelector('.button--menu').addEventListener('click', openMenu);
-document.querySelector('.button--close').addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu);
+document.querySelectorAll('.button--close').forEach((item)=>{
+  item.addEventListener('click', closeActive);
+});
+overlay.addEventListener('click', closeActive);
+
+//modal-call
+document.querySelectorAll('.button--icon-call').forEach((item)=>{
+  item.addEventListener('click',function () {
+    if (window.innerWidth>1366) {
+      modalCall.style.top = window.pageYOffset+'px';
+    }
+    modalCall.classList.add('modal--visible');
+    overlay.classList.add('overlay--on');
+    body.classList.add('body--no-scroll');
+  })
+});
+
+//modal-feedback
+document.querySelectorAll('.button--icon-chat').forEach((item)=>{
+  item.addEventListener('click',function () {
+    if (window.innerWidth>1366) {
+      modalFeedback.style.top = window.pageYOffset+'px';
+    }
+    modalFeedback.classList.add('modal--visible');
+    overlay.classList.add('overlay--on');
+    body.classList.add('body--no-scroll');
+  })
+});
 
 
 //menu-items
@@ -90,8 +116,12 @@ document.querySelectorAll('.slide-menu__item').forEach((item)=>{
 function openMenu() {
   menu.classList.add('menu--visible');
   overlay.classList.add('overlay--on');
+  body.classList.add('body--no-scroll');
 }
-function closeMenu() {
+function closeActive() {
   menu.classList.remove('menu--visible');
+  modalCall.classList.remove('modal--visible');
+  modalFeedback.classList.remove('modal--visible');
   overlay.classList.remove('overlay--on');
+  body.classList.remove('body--no-scroll');
 }

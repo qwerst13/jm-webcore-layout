@@ -8,16 +8,19 @@
 a {
   text-decoration: none;
   border: none;
-  color: #1B1C21;
+  color: $text-main;
 }
 
-body{
+.body{
   font-family: $font-regular;
-  color: #1B1C21;
+  color: $text-main;
   font-size: 14px;
   line-height: 18px;
   background: repeat url("../img/background.png");
 
+  &--no-scroll{
+    overflow: hidden;
+  }
 }
 
 li{

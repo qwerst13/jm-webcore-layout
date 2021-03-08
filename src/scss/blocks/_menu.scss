@@ -25,6 +25,7 @@
     height: auto;
     box-shadow: none;
     flex-shrink: 1;
+    z-index: auto;
   }
 
   .header{
@@ -37,7 +38,11 @@
   }
   .menu-footer{
     padding: 16px 16px 40px 16px;
-    margin: 120px 0 auto 0;
+    margin: auto 0 50px 0;
+
+    @media (min-width: $screen-lg) {
+      margin: 120px 0 auto 0;
+    }
 
     .icons__block-1{
       display: block;
@@ -123,6 +128,7 @@
   display: none;
   position: fixed;
   width: 100%;
+  max-width: inherit;
   height: 100%;
   background-color: $white;
   filter: opacity(0.95);
