@@ -1,15 +1,37 @@
+//возня
+
+
 .about{
   @include flex($items:flex-start);
   flex-wrap: wrap;
+
 
   @media (min-width: $screen-md) {
     display: inline-block;
   }
 
-  &__desription{
+  &__description{
     margin: 0 24px 24px 3vw;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    max-height: 5em;
+    transition: max-height 0.5s ease;
+
+    @media (min-width: $screen-md) {
+      display: block;
+
+      max-height: 8em;
+    }
+    @media (min-width: $screen-lg) {
+      max-height: 11em;
+
+    }
+
+    &--full{
+      max-height: 500px;
+      overflow: visible;
+    }
   }
   &__expand{
     display: inline-block;
@@ -18,7 +40,7 @@
     padding-left: 20px;
     font-size: 16px;
     vertical-align: top;
-    margin: 16px 8px;
+    margin: 16px 3em;
     font-family: $font-medium;
 
     &:hover{
@@ -31,35 +53,21 @@
     }
   }
   &__text{
-    max-height: 5em;
-    overflow: hidden;
-    transition: max-height 1s ease;
-
-    @media (min-width: $screen-md) {
-      max-height: 8em;
-    }
-    @media (min-width: $screen-lg) {
-      max-height: 11em;
-
-    }
-
-    &--full{
-      max-height: 500px;
-    }
+    display: inline;
   }
   &__picture{
     width: 320px;
-    margin: 0 auto;
+    margin: 8px auto;
     order: 2;
 
     @media (min-width: $screen-md) {
       width: 360px;
-      margin: 0 24px;
+      margin: 0 24px 24px 24px;
       float: right;
     }
     @media (min-width: $screen-lg) {
       width: 520px;
-      margin: 0 32px;
+      margin: 0 32px 32px 32px;
       float: right;
     }
   }

@@ -26,10 +26,9 @@ if (window.innerWidth<768) {
   });
 }
 
-
 /* if resize need
 if (window.innerWidth>768) {
-  swiper.destroy(false,true);// если 2-й аргумент true, обнуляются пользовательские стили
+  swiper.destroy(false, true);// if 2-nd arg - true, swiper-styles would be disabled
 }
 */
 
@@ -47,18 +46,17 @@ document.querySelectorAll('.swiper-container>.about__expand').forEach((item)=>{
 });
 
 document.querySelector('.about .about__expand').addEventListener('click',(e)=>{
-   document.querySelector('.about__text').classList.toggle('about__text--full');
+   document.querySelector('.about__description').classList.toggle('about__description--full');
     e.target.classList.toggle('about__expand--expanded');
-    if (e.target.parentElement.querySelector('.about__text').classList.contains('about__text--full')){
+    if (document.querySelector('.about__description').classList.contains('about__description--full')){
       e.target.innerHTML='Скрыть';
     } else {
       e.target.innerHTML='Читать далее';
     }
   });
 
-
-//Плавная прокрутка до якоря
-const anchors = document.querySelectorAll('a[href*="#"]:not(a[href$="#"])');//not - игнорировать заглушки, т.к. пустых id нет
+//Smooth scroll to anchors
+const anchors = document.querySelectorAll('a[href*="#"]:not(a[href$="#"])');//not - ignore only "#" without names
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -72,7 +70,7 @@ for (let anchor of anchors) {
   })
 }
 
-
+//event listeners
 let menu = document.querySelector('.menu'),
     overlay = document.querySelector('.overlay'),
     body = document.querySelector('.body'),
@@ -88,11 +86,12 @@ overlay.addEventListener('click', closeActive);
 
 //modal-call
 document.querySelectorAll('.button--icon-call').forEach((item)=>{
-  item.addEventListener('click',function () {
+  item.addEventListener('click', ()=>{
     if (window.innerWidth>1366) {
       modalCall.style.top = window.pageYOffset+'px';
     }
     modalCall.classList.add('modal--visible');
+    overlay.style['z-index']='25';
     overlay.classList.add('overlay--on');
     body.classList.add('body--no-scroll');
   })
@@ -100,13 +99,32 @@ document.querySelectorAll('.button--icon-call').forEach((item)=>{
 
 //modal-feedback
 document.querySelectorAll('.button--icon-chat').forEach((item)=>{
-  item.addEventListener('click',function () {
+  item.addEventListener('click', ()=>{
     if (window.innerWidth>1366) {
       modalFeedback.style.top = window.pageYOffset+'px';
     }
     modalFeedback.classList.add('modal--visible');
+    overlay.style['z-index']='25';
     overlay.classList.add('overlay--on');
     body.classList.add('body--no-scroll');
+  })
+});
+
+//modal-order action
+document.querySelectorAll('.modal form').forEach((item)=>{
+  item.addEventListener('submit', (e)=>{
+
+    e.preventDefault();
+    let message = '',
+    form = e.target;
+
+    for (let i=0; i<form.elements.length-1; i++){
+      message += `${form.elements[i].name}: ${form.elements[i].value}\n`;
+    }
+
+    alert(message);
+
+
   })
 });
 
@@ -128,8 +146,7 @@ document.querySelectorAll('.slide-menu__item').forEach((item)=>{
 });
 
 
-
-
+//functions
 function openMenu() {
   menu.classList.add('menu--visible');
   overlay.classList.add('overlay--on');
@@ -139,6 +156,7 @@ function closeActive() {
   menu.classList.remove('menu--visible');
   modalCall.classList.remove('modal--visible');
   modalFeedback.classList.remove('modal--visible');
+  overlay.style['z-index']='10';
   overlay.classList.remove('overlay--on');
   body.classList.remove('body--no-scroll');
 }

@@ -1,11 +1,12 @@
 {
-  "name": "webpack-test",
+  "name": "jm-webcore-layout",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://qwerst13.github.io/jm-webcore-layout/",
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/preset-env": "7.5.5",
