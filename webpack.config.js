@@ -62,6 +62,16 @@ module.exports = {
           },
         ]
       },
+
+//favicon from root directory
+      {
+        test: /\.ico$/,
+        use: [
+          {
+            loader: 'file-loader?name=[name].[ext]'
+          },
+        ]
+      },
     ],
   },
   plugins: [
@@ -69,6 +79,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack 4 Starter',
       template: './src/index.html',
+      favicon: "favicon.ico",  //favicon
       inject: true,
       minify: {
         removeComments: true,

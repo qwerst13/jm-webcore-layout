@@ -12,7 +12,7 @@
   flex-shrink: 0;
   background-color: #fff;
   font-size: 16px;
-  box-shadow: 4px 0 40px gray;
+  box-shadow: 4px 0 40px $text-gray;
   overflow: hidden;
   -ms-overflow-style: none;  /* IE 10+ */
   scrollbar-width: none; /* Firefox */
@@ -109,33 +109,13 @@
       background: no-repeat url('../img/menu-highlight.svg');
 
       a{
-        color: gray;
+        color: $text-gray;
       }
     }
   }
-
 
   &--visible{
     height: 100vh;
     transition-duration: 1s;
   }
-
 }
-
-
-
-.overlay{
-  display: none;
-  position: fixed;
-  width: 100%;
-  max-width: inherit;
-  height: 100%;
-  background-color: $white;
-  filter: opacity(0.95);
-  z-index: 10;
-
-  &--on{
-    display: block;
-  }
-}
-

@@ -1,0 +1,14 @@
+.title{
+  @include flex(space-between);
+  margin: 24px 0;
+
+  &__text{
+    padding-left: 3vw;
+    height: 40px;
+    line-height: 40px;
+
+    &--highlight{
+      background: no-repeat url('../img/highlight.svg');
+    }
+  }
+}
