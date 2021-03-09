@@ -322,7 +322,7 @@ span {
     height: 40px; }
     .slide-menu__item--current {
       background: #FFFFFF;
-      border: 2px solid #B8FFEC;
+      border: 2px solid #D9FFF5;
       border-radius: 6px; }
   .slide-menu__link {
     font-family: "TT Lakes Medium", Arial, SansSerif;
@@ -448,7 +448,7 @@ span {
   flex-shrink: 0;
   background-color: #fff;
   font-size: 16px;
-  box-shadow: 4px 0 40px gray;
+  box-shadow: 4px 0 40px #7E7E82;
   overflow: hidden;
   -ms-overflow-style: none;
   /* IE 10+ */
@@ -521,23 +521,10 @@ span {
     .menu__item--current {
       background: no-repeat url(./static/menu-highlight.svg); }
       .menu__item--current a {
-        color: gray; }
+        color: #7E7E82; }
   .menu--visible {
     height: 100vh;
     transition-duration: 1s; }
-
-.overlay {
-  display: none;
-  position: fixed;
-  width: 100%;
-  max-width: inherit;
-  height: 100%;
-  background-color: #FFFFFF;
-  -webkit-filter: opacity(0.95);
-          filter: opacity(0.95);
-  z-index: 10; }
-  .overlay--on {
-    display: block; }
 
 .swiper {
   width: 320px;
@@ -803,7 +790,7 @@ span {
   width: 240px; }
 
 .swiper-slide {
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 6px; }
 
 .swiper-pagination {
@@ -957,6 +944,19 @@ span {
   .modal__link {
     color: #FF3E79; }
   .modal--visible {
+    display: block; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  max-width: inherit;
+  height: 100%;
+  background-color: #FFFFFF;
+  -webkit-filter: opacity(0.95);
+          filter: opacity(0.95);
+  z-index: 10; }
+  .overlay--on {
     display: block; }
 
 
