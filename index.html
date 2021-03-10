@@ -35,8 +35,6 @@
     </div>
   </header>
 
-
-
   <div class="menu">
     <div class="header menu-header">
       <button class="button button--close"></button>
@@ -82,8 +80,8 @@
 
     <form id="feedback" action="" method="post" class="modal__form">
       <input name="name" class="modal__input" placeholder="Имя" required>
-      <input name="phone" class="modal__input" placeholder="Телефон" required>
-      <input name="mail" class="modal__input" placeholder="Электронная почта" required>
+      <input type="tel" name="phone" class="modal__input" placeholder="Телефон" required>
+      <input type="email" name="mail" class="modal__input" placeholder="Электронная почта" required>
       <textarea name="message" class="modal__textarea" placeholder="Сообщение" required></textarea>
     </form>
 
@@ -91,7 +89,7 @@
       Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности.</a>
     </div>
 
-    <button type="button" form="feedback" class="button button--order">ОТПРАВИТЬ</button>
+    <button form="feedback" class="button button--order">ОТПРАВИТЬ</button>
 
   </div>
   <div class="modal modal--call">
@@ -101,14 +99,14 @@
     <h3 class="modal__title title__text title__text--highlight">Заказать звонок</h3>
 
     <form id="call" action="" method="post" class="modal__form">
-      <input name="phone" class="modal__input" placeholder="Телефон" required>
+      <input type="tel" name="phone" class="modal__input" placeholder="Телефон" required>
     </form>
 
     <div class="modal__text">
       Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности.</a>
     </div>
 
-    <button type="button" form="call" class="button button--order">ОТПРАВИТЬ</button>
+    <button form="call" class="button button--order">ОТПРАВИТЬ</button>
 
   </div>
 
@@ -143,7 +141,8 @@
 
     <div class="about">
       <img class="about__picture" alt="Наш офис" src="img/IMG_3223.jpg">
-      <article class="about__desription">
+      <article class="about__description">
+
         <div class="about__text">
           <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
           <br>
@@ -153,9 +152,9 @@
           <br>
           <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
         </div>
-        <div class="about__expand">Читать далее</div>
-      </article>
 
+      </article>
+      <div class="about__expand">Читать далее</div>
     </div>
 
 

@@ -341,10 +341,23 @@ span {
   @media (min-width: 768px) {
     .about {
       display: inline-block; } }
-  .about__desription {
+  .about__description {
     margin: 0 24px 24px 3vw;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 5em;
+    transition: max-height 0.5s ease; }
+    @media (min-width: 768px) {
+      .about__description {
+        display: block;
+        max-height: 8em; } }
+    @media (min-width: 1120px) {
+      .about__description {
+        max-height: 11em; } }
+    .about__description--full {
+      max-height: 500px;
+      overflow: visible; }
   .about__expand {
     display: inline-block;
     align-self: flex-start;
@@ -352,7 +365,7 @@ span {
     padding-left: 20px;
     font-size: 16px;
     vertical-align: top;
-    margin: 16px 8px;
+    margin: 16px 3em;
     font-family: "TT Lakes Medium", Arial, SansSerif; }
     .about__expand:hover {
       -webkit-filter: opacity(0.7);
@@ -362,30 +375,20 @@ span {
     .about__expand--expanded {
       background: no-repeat left 5px center url(./static/collapse.svg); }
   .about__text {
-    max-height: 5em;
-    overflow: hidden;
-    transition: max-height 1s ease; }
-    @media (min-width: 768px) {
-      .about__text {
-        max-height: 8em; } }
-    @media (min-width: 1120px) {
-      .about__text {
-        max-height: 11em; } }
-    .about__text--full {
-      max-height: 500px; }
+    display: inline; }
   .about__picture {
     width: 320px;
-    margin: 0 auto;
+    margin: 8px auto;
     order: 2; }
     @media (min-width: 768px) {
       .about__picture {
         width: 360px;
-        margin: 0 24px;
+        margin: 0 24px 24px 24px;
         float: right; } }
     @media (min-width: 1120px) {
       .about__picture {
         width: 520px;
-        margin: 0 32px;
+        margin: 0 32px 32px 32px;
         float: right; } }
 
 .header {
@@ -884,7 +887,7 @@ span {
   height: 100vh;
   width: 100vw;
   background-color: #FFFFFF;
-  z-index: 20; }
+  z-index: 30; }
   @media (min-width: 768px) {
     .modal {
       width: 440px;
